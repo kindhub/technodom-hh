@@ -1,0 +1,322 @@
+extends ./pug/layout
+
+block content
+
+	<!-- START HEADER -->
+	.section.header
+		.container
+			.header__inner
+				a.header__logo(href="#home")
+					img.header__logo-img(src="https://hhcdn.ru/ichameleon/295263.svg")
+				.header__nav.nav
+					a.nav__item.anchor(href="#about") О компании
+					a.nav__item.anchor(href="#work") Вектор работы
+					a.nav__item.anchor(href="#atmos") Атмосфера
+					a.nav__item.anchor(href="#social") Мы на связи
+					a.nav__item.vacancy-btn Вакансии
+				+nav-btn
+	<!-- END HEADER -->
+
+	<!-- START FIRST-SCREEN -->
+	.section.first-screen#home 
+		.container
+			.first-screen__inner 
+				.first-screen__title место твоих возможностей
+	<!-- END FIRST-SCREEN -->
+
+	<!-- START ABOUT -->
+	.section.about#about
+		.container
+			.about__inner 
+				.about__img-wrapper
+					img.about__img(src="https://hhcdn.ru/ichameleon/295264.jpg" alt="#") 
+				.about__text-wrapper
+					.title.title--left.title--mb-short  <span>Кто</span> мы?
+					.about__text Technodom – это компания для тех, кто хочет постоянно развиваться, двигаться вперед и добиваться большего. Для тех, кто не боится сложных задач и выбирает амбициозные цели. Это место, где каждому сотруднику предоставляются лучшие условия для работы, развития и самореализации.
+	<!-- END ABOUT -->
+
+	<!-- START VALUES -->
+	.section.values
+		.title.title--mb-medium <span>Наши</span> ценности
+		.values__inner
+			.swiper-container.values-slider
+				.swiper-wrapper
+					.swiper-slide.first-slider-slide
+						+values-card('Лидерство', 'Мы не только следуем за трендами, но и создаем их, формируя будущее нашей отрасли. Мы не боимся брать ответственность и принимать риски, преодолевая преграды на своем пути. Мы стремимся к выдающимся результатам, строя успешную команду и создавая новые возможности для роста и развития.', 'https://hhcdn.ru/ichameleon/295251.png')
+					.swiper-slide.first-slider-slide
+						+values-card('Клиенто-ориентированность', '<span>Клиенты – наш главный ориентир.</span> <br> Мы стремимся создавать не просто продукты и услуги, а решения, которые полностью удовлетворяют потребности наших клиентов, превосходя их ожидания.', 'https://hhcdn.ru/ichameleon/295248.png')
+					.swiper-slide.first-slider-slide
+						+values-card('Социальная ответственность', 'Мы убеждены, что успех должен быть сбалансирован с ответственностью перед обществом и окружающей средой. Мы поддерживаем благотворительные программы, участвуем в социальных проектах и стремимся сохранить окружающую среду Казахстана.', 'https://hhcdn.ru/ichameleon/295250.png')
+					.swiper-slide.first-slider-slide
+						+values-card('Командность и единство', 'Мы искренне верим в силу команды и строим культуру сотрудничества, где идеи и мнения каждого имеют значение. Командная работа позволяет нам достигать нужных результатов и создавать атмосферу взаимной поддержки и вдохновения внутри компании.', 'https://hhcdn.ru/ichameleon/295249.png')
+					.swiper-slide.first-slider-slide
+						+values-card('Инновационность', 'Мы открыты к новым идеям и стремимся изменить мир вокруг нас через инновации. Мы исследуем новые технологии, идеи и подходы, чтобы находить уникальные решения для наших клиентов.', 'https://hhcdn.ru/ichameleon/295247.png')
+					.swiper-slide.first-slider-slide
+						+values-card('Профессионализм', 'Это не просто набор навыков и знаний, это глубокая страсть к своей работе, которая отличает каждого технопатриота. Мы не останавливаемся на достигнутом, развиваемся и повышаем свою экспертизу, чтобы оставаться лидерами в своем направлении.', 'https://hhcdn.ru/ichameleon/295246.png')
+	<!-- END VALUES -->
+
+	<!-- START FIRST-SLIDER -->
+	.section.first-slider.section--short-pt 
+		.container 
+			.first-slider__inner 
+				.swiper-container.first-slider(data-arrow-prev=".tmpl-hh__first-slider-arrow-prev" data-arrow-next=".tmpl-hh__first-slider-arrow-next")
+					.swiper-wrapper
+						.swiper-slide.first-slider-slide
+							.first-slider-one__content
+								.first-slider-one__text-wrapper 
+									.first-slider-one__title Драйвовая команда
+									.first-slider-one__text Драйв, энергия и страсть к любимому делу — то, что отличает нашу команду. Вместе мы работаем и отдыхаем, проводим крутые ивенты, Family Day, занимаемся спортом и реализуем социальные проекты в открытой и теплой атмосфере роста.
+						.swiper-slide.first-slider-slide
+							.first-slider-two__content
+								.first-slider__subtitle Социальные программы и экодвижение
+								.first-slider__title Любим природу, любим Казахстан!
+								.first-slider__counter-wrapper
+									.first-slider__counter
+										.first-slider__counter-text Высадили более
+										.first-slider__counter-count <span class='countup' data-value='1000'>1000</span>+
+										.first-slider__counter-text деревьев
+									.first-slider__counter
+										.first-slider__counter-text Убрали
+										.first-slider__counter-count <span class='countup' data-value='22'>22</span>
+										.first-slider__counter-text тонны мусора
+									.first-slider__counter
+										.first-slider__counter-text Установили
+										.first-slider__counter-count <span class='countup' data-value='135'>135</span>
+										.first-slider__counter-text Экобоксов <br> по Казахстану
+									.first-slider__counter
+										.first-slider__counter-text Открыли самый
+										.first-slider__counter-count зеленый
+										.first-slider__counter-text магазин в СНГ
+						.swiper-slide.first-slider-slide
+							.first-slider-three__content
+								.first-slider-three__title Технодом в цифрах
+								.first-slider-three__counter-wrapper
+									.first-slider-three__counter
+										.first-slider-three__counter-count <span class='countup' data-value='2'>2</span>
+										.first-slider-three__counter-text Развиваем бизнес <br> в 2 странах
+									.first-slider-three__counter
+										.first-slider-three__counter-count <span class='countup' data-value='28'>28</span>
+										.first-slider-three__counter-text Доступны <br> в 28 городах
+									.first-slider-three__counter
+										.first-slider-three__counter-count <span class='countup' data-value='79'>79</span>
+										.first-slider-three__counter-text 79 магазинов <br> и 92 ПВЗ
+									.first-slider-three__counter
+										.first-slider-three__counter-count <span class='countup' data-value='21'>21</span>
+										.first-slider-three__counter-text 21 год успешной <br> работы
+									.first-slider-three__counter
+										.first-slider-three__counter-count <span class='countup' data-value='6000'>6000</span>
+										.first-slider-three__counter-text Более 6000 сотрудников <br> по всей стране
+									.first-slider-three__counter
+										.first-slider-three__counter-count ТОП-3
+										.first-slider-three__counter-text ТОП-3 лучших работодателя Казахстана по версии Ranstad
+						.swiper-slide.first-slider-slide
+							.first-slider-four__wrapper
+								.first-slider-four__content
+									.first-slider-four__title Магазины по всему Казахстану
+									.first-slider-four__counter-wrapper
+										.first-slider-four__counter
+											.first-slider-four__counter-count <span class='countup' data-value='79'>79</span>
+											.first-slider-four__counter-text магазинов
+										.first-slider-four__counter
+											.first-slider-four__counter-count <span class='countup' data-value='92'>92</span>
+											.first-slider-four__counter-text ПВЗ
+										.first-slider-four__counter
+											.first-slider-four__counter-count <span class='countup' data-value='6000'>6 000</span>+
+											.first-slider-four__counter-text сотрудников
+								.first-slider-four__img-wrapper 
+									img(src="https://hhcdn.ru/ichameleon/295267.png" )
+
+
+					.slider-arrows.first-slider-arrows
+						.slider-arrow.slider-arrow--prev.first-slider-arrow-prev
+							+icon("left-arrow", "slider-arrow__icon")
+						.slider-arrow.slider-arrow--next.first-slider-arrow-next
+							+icon("right-arrow", "slider-arrow__icon")
+	<!-- END FIRST-SLIDER -->
+
+
+	<!-- START SECOND-SLIDER -->
+	.section.second-slider.section--short-pt 
+		.container 
+			.second-slider__inner
+				.second-slider__title technodom в лицах
+				.swiper-container.second-slider(data-arrow-prev=".tmpl-hh__second-slider-arrow-prev" data-arrow-next=".tmpl-hh__second-slider-arrow-next")
+					.swiper-wrapper
+						.swiper-slide.second-slider-slide
+							.second-slider__content
+								.second-slider__title-wrapper 
+									.second-slider__text 95% директоров магазинов начинали карьеру с должности продавца-консультанта
+									.second-slider__card-wrapper 
+										.second-slider__img-wrapper
+											.second-slider__img
+												img(src="https://hhcdn.ru/file/17523366.png" )
+										.second-slider__text-wrapper 
+											.second-slider__text-name Антон Судариков
+											.second-slider__text-position Коммерческий директор, <br> в компании с 2004 года
+											.second-slider__text-description Начинал свой путь с должности <br> администратора магазина
+						.swiper-slide.second-slider-slide
+							.second-slider__content
+								.second-slider__title-wrapper 
+									.second-slider__text Успех компании — тысячи личных и профессиональных успехов каждого сотрудника.
+									.second-slider__card-wrapper 
+										.second-slider__img-wrapper
+											.second-slider__img
+												img(src="https://hhcdn.ru/file/17523367.png" )
+										.second-slider__text-wrapper 
+											.second-slider__text-name Юлия Искандар
+											.second-slider__text-position Начальник отдела кадрового администрирования, в компании <br> с 2011 года
+											.second-slider__text-description Начинала с должности оператора <br> кадрового администрирования
+						.swiper-slide.second-slider-slide
+							.second-slider__content
+								.second-slider__title-wrapper 
+									.second-slider__text Более 20 лет успешной работы на рынке Казахстана и Средней Азии
+									.second-slider__card-wrapper 
+										.second-slider__img-wrapper
+											.second-slider__img
+												img(src="https://hhcdn.ru/file/17523368.png" )
+										.second-slider__text-wrapper 
+											.second-slider__text-name Хамит Койшубаев
+											.second-slider__text-position Начальник управления <br> складской логистики Север
+											.second-slider__text-description Начал свой путь в компании в 2005 году <br> с должности продавца-консультанта
+					.slider-arrows.second-slider-arrows
+						.slider-arrow.slider-arrow--prev.second-slider-arrow-prev
+							+icon("left-arrow", "slider-arrow__icon")
+						.slider-arrow.slider-arrow--next.second-slider-arrow-next
+							+icon("right-arrow", "slider-arrow__icon")
+	<!-- END SECOND-SLIDER -->
+
+	<!-- START THIRD-SLIDER -->
+	.section.third-slider.section--short-pt 
+		.container 
+			.third-slider__inner
+				.title.title--mb-medium <span>Почему</span> Technodom?
+				.swiper-container.third-slider(data-arrow-prev=".tmpl-hh__third-slider-arrow-prev" data-arrow-next=".tmpl-hh__third-slider-arrow-next")
+					.swiper-wrapper
+						.swiper-slide.third-slider-slide
+							.third-slider__content.third-slider__content--one
+								.third-slider__text-wrapper 
+									.third-slider__title Работаем и  заботимся о своих
+									.third-slider__text 
+										p Любим работать и получаем от этого удовольствие. Все значимые проекты делаем командой, даже если находимся в разных городах и направлениях. Проводим крутые ивенты, Family Day на базе отдыха в горах и корпоративные праздники.
+						.swiper-slide.third-slider-slide
+							.third-slider__content.third-slider__content--two
+								.third-slider__text-wrapper 
+									.third-slider__title Учимся и растем
+									.third-slider__text
+										p Изучаем новое, чтобы быть <br> готовыми к прогрессу, переменам и решениям будущего.
+										p Корпоративный учебный центр, <br> база лекций и статей в свободном доступе, участие в конференциях и тренингах за счет компании.
+						.swiper-slide.third-slider-slide
+							.third-slider__content.third-slider__content--three
+								.third-slider__text-wrapper 
+									.third-slider__title Создаем новое
+									.third-slider__text
+										p Инновации — наша ценность. <br>Используем цифровые технологии в работе и создаем продукты, меняющие жизни людей. Каждый день стараемся быть на шаг дальше, чем вчера.
+						.swiper-slide.third-slider-slide
+							.third-slider__content.third-slider__content--four
+								.third-slider__text-wrapper 
+									.third-slider__title Все делаем с любовью
+									.third-slider__text
+										p Любовь к людям, команде, клиентам, природе – наш главный приоритет. Берем ответственность за свои действия и верим, что в наших силах изменить мир к лучшему.
+					.slider-arrows.third-slider-arrows
+						.slider-arrow.slider-arrow--prev.third-slider-arrow-prev
+							+icon("left-arrow", "slider-arrow__icon")
+						.slider-arrow.slider-arrow--next.third-slider-arrow-next
+							+icon("right-arrow", "slider-arrow__icon")
+	<!-- END THIRD-SLIDER -->
+
+	<!-- START WORK -->
+	.section.work.section--short-pt#work
+		.container 
+			.work__inner
+				.title.title--mb-medium <span>вектор</span> работы
+				.work__cards-wrapper
+					.work__card-parent
+						.work__card 
+							.work__card-title Центральный офис
+							.work__card-img-wrapper 
+								img(src="https://hhcdn.ru/ichameleon/295256.png" )
+							.work__card-text 
+								p Присоединяйся к драйвовой команде и стань ключевым игроком в управлении проектами, разработке стратегий и обеспечении операционной эффективности компании. Развивай административные и коммуникационные навыки, работая с опытными профессионалами во вдохновляющей среде. <br><span>Ищи, предлагай и внедряй лучшие решения!</span>
+					.work__card-parent
+						.work__card
+							.work__card-title Магазины и ПВЗ
+							.work__card-img-wrapper 
+								img(src="https://hhcdn.ru/ichameleon/295255.png" )
+							.work__card-text 
+								p Стань частью команды единомышленников в одном из самых главных направлений работы. Развивайся, учись и будь первым лицом компании, помогая клиентам, предоставляя первоклассный сервис и укрепляя репутацию бренда.
+					.work__card-parent
+						.work__card 
+							.work__card-title Контакт-центр
+							.work__card-img-wrapper.work__card-img-wrapper--three
+								img(src="https://hhcdn.ru/ichameleon/295252.png" )
+							.work__card-text 
+								p Стань голосом компании, обеспечивая качественное взаимодействие с клиентами, создавая незабываемый опыт с командой профессионалов в динамичной среде.
+					.work__card-parent
+						.work__card 
+							.work__card-title Логистика и снабжение
+							.work__card-img-wrapper 
+								img(src="https://hhcdn.ru/ichameleon/295254.png" )
+							.work__card-text 
+								p Стань ключевым звеном в снабжении и обеспечении эффективных поставок в направлении логистики. Работай с инновационными технологиями и методами, оптимизируя процессы и обеспечивая бесперебойное движение товаров.
+					.work__card-parent
+						.work__card
+							.work__card-title Экосистема Технодом
+							.work__card-img-wrapper.work__card-img-wrapper--five 
+								img(src="https://hhcdn.ru/ichameleon/295253.png" )
+							.work__card-text 
+								p Открой для себя новые карьерные траектории в одной из компаний Экосистемы. Здесь ты найдешь возможности для роста, развития и реализации своего потенциала, работая в различных областях бизнеса: от фитнес-центров до кулинарных студий. Присоединяйся к нашей команде, развивайся, достигай новых высот и воплощай свои карьерные цели вместе с нами!
+	<!-- END WORK -->
+	
+	<!-- START FOURTH-SLIDER -->
+	.section.fourth-slider.section--short-pt#atmos
+		.container 
+			.fourth-slider__inner
+				.title.title--mb-medium <span>Погрузись в атмосферу</span> TechnoTeam
+				.swiper-container.fourth-slider(data-arrow-prev=".tmpl-hh__fourth-slider-arrow-prev" data-arrow-next=".tmpl-hh__fourth-slider-arrow-next")
+					.swiper-wrapper
+						.swiper-slide.fourth-slider-slide
+							.fourth-slider__img-wrapper
+								img(src="https://hhcdn.ru/ichameleon/295241.jpg" )
+						.swiper-slide.fourth-slider-slide
+							.fourth-slider__img-wrapper
+								img(src="https://hhcdn.ru/ichameleon/295242.jpg" )
+						.swiper-slide.fourth-slider-slide
+							.fourth-slider__img-wrapper
+								img(src="https://hhcdn.ru/ichameleon/295243.jpg" )
+						.swiper-slide.fourth-slider-slide
+							.fourth-slider__img-wrapper
+								img(src="https://hhcdn.ru/ichameleon/295244.jpg" )
+				.slider-arrows.fourth-slider-arrows
+					.slider-arrow.slider-arrow--prev.fourth-slider-arrow-prev
+						+icon("left-arrow", "slider-arrow__icon")
+					.slider-arrow.slider-arrow--next.fourth-slider-arrow-next
+						+icon("right-arrow", "slider-arrow__icon")
+				.slider__pagination-wrapper 
+					.slider__pagination
+						span.swiper-pagination-bullet
+						span.swiper-pagination-bullet
+						span.swiper-pagination-bullet
+						span.swiper-pagination-bullet
+	<!-- END FOURTH-SLIDER -->
+
+	<!-- START SOCIAL -->
+	.section.social#social
+		.container 
+			.social__inner 
+				.social__title мы на связи:
+				.social__items 
+					a.social__item(href="https://instagram.com/technoteam.kz?igshid=MzRlODBiNWFlZA==" target="_blank")
+						.social__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/295259.jpg" )
+						.social__text 	Technoteam.kz
+					a.social__item(href="https://www.tiktok.com/@technoteam.kz?_t=8dbMdBfFIgP&_r=1" target="_blank")
+						.social__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/295258.jpg" )
+						.social__text 	Technoteam.kz
+					a.social__item(href="https://youtube.com/@techno_team" target="_blank")
+						.social__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/295257.jpg" )
+						.social__text 	Techno_team
+	<!-- END SOCIOAL -->
+
+	
