@@ -109,12 +109,12 @@
 	.about {
 		&__img-wrapper {
 			width: 100%;
-			order: 2;
 		}
 
 		&__text-wrapper {
 			width: 100%;
-			margin-bottom: 20px;
+			margin-top: 64px;
+			margin-left: 0;
 
 			& .title {
 				text-align: center;
@@ -142,6 +142,21 @@
 		}
 	}
 
+	.first-slider-slide--two>.values-card .values-card__content {
+		width: 65%;
+	}
+	
+	.first-slider-slide--four>.values-card .values-card__content {
+		width: 65%;
+	}
+	
+	.first-slider-slide--five>.values-card .values-card__content {
+		width: 65%;
+	}
+	
+	.first-slider-slide--six>.values-card .values-card__content {
+		width: 66%;
+	}
 	// .values-slider {
 	// 	margin: 0 -75%;
 	// }
@@ -445,6 +460,10 @@
 		padding-top: 0px;
 	}
 
+	.about__text-wrapper {
+		margin-top: 44px;
+	}
+
 	.values {
 		&-card {
 			height: 160px;
@@ -459,11 +478,21 @@
 			}
 		}
 	}
-
-	// .values-slider {
-	// 	margin: 0 -40%;
-	// }
-
+	.first-slider-slide--two>.values-card .values-card__content {
+		width: 65%;
+	}
+	
+	.first-slider-slide--four>.values-card .values-card__content {
+		width: 65%;
+	}
+	
+	.first-slider-slide--five>.values-card .values-card__content {
+		width: 65%;
+	}
+	
+	.first-slider-slide--six>.values-card .values-card__content {
+		width: 66%;
+	}
 	.first-slider-one {
 		&__content {
 			height: 280px;
@@ -646,9 +675,12 @@
 	.about {
 		margin-top: -60px;
 	}
+	.about__text-wrapper {
+		margin-top: 34px;
+	}
 	.title {
 		font-size: 20px;
-		margin: 25px auto;
+		margin: 0px auto 25px;
 		width: 80%;
 	}
 
@@ -662,7 +694,7 @@
 			padding: 10px;
 
 			&__content {
-				width: 100%;
+				width: 100% !important;
 				position: relative;
 				overflow: hidden;
 				padding: 5px;
@@ -809,7 +841,7 @@
 	}
 
 	.work {
-		min-height: 850px;
+		min-height: 840px;
 
 		&__card {
 			height: 120px;

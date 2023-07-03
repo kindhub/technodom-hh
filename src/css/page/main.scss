@@ -9,37 +9,41 @@
 	font-family: "Museo";
 	font-style: normal;
 	font-weight: 900;
-	src: url(https://www.technodom.kz/under/tab_showcase/fonts/MUSEOSANSCYRL_4.OTF);      
+	src: url(https://www.technodom.kz/under/tab_showcase/fonts/MUSEOSANSCYRL_4.OTF);
 	font-display: swap;
-  }
-  @font-face {
+}
+
+@font-face {
 	font-family: "Museo";
 	font-style: normal;
 	font-weight: 100;
-	src: url(https://www.technodom.kz/under/tab_showcase/fonts/MUSEOSANSCYRL_5.OTF);      
+	src: url(https://www.technodom.kz/under/tab_showcase/fonts/MUSEOSANSCYRL_5.OTF);
 	font-display: swap;
-  }
-  @font-face {
+}
+
+@font-face {
 	font-family: "Museo";
 	font-style: normal;
 	font-weight: 300;
-	src: url(https://www.technodom.kz/under/tab_showcase/fonts/MUSEOSANSCYRL_6.OTF);      
+	src: url(https://www.technodom.kz/under/tab_showcase/fonts/MUSEOSANSCYRL_6.OTF);
 	font-display: swap;
-  }
-  @font-face {
+}
+
+@font-face {
 	font-family: "Museo";
 	font-style: normal;
 	font-weight: 700;
 	src: url(https://www.technodom.kz/under/tab_showcase/fonts/MUSEOSANSCYRL.OTF);
 	font-display: swap;
-  }
-  @font-face {
+}
+
+@font-face {
 	font-family: "Museo";
 	font-style: normal;
 	font-weight: 400;
 	src: url(https://www.technodom.kz/under/tab_showcase/fonts/MUSEOSANSCYRL_7.OTF);
 	font-display: swap;
-  }
+}
 
 
 
@@ -83,10 +87,14 @@
 	display: flex;
 
 	&__item {
-		font-weight: 700;
+		font-weight: 400;
 		cursor: pointer;
 		color: #fff;
 		transition: all .4s;
+
+		&:nth-child(1) {
+			font-weight: 700;
+		}
 
 		&:hover,
 		&:focus {
@@ -268,7 +276,6 @@
 
 	&__inner {
 		display: flex;
-		justify-content: space-between;
 		flex-wrap: wrap;
 		align-items: center;
 	}
@@ -285,12 +292,14 @@
 	}
 
 	&__text-wrapper {
-		width: 43%;
+		width: 39%;
+		margin-left: 77px;
 	}
 
 	&__text {
 		line-height: 24px;
 		font-weight: 300;
+		text-align: justify;
 	}
 }
 
@@ -311,10 +320,9 @@
 		border-radius: 10px;
 		color: #fff;
 		height: 226px;
-		// flex: 0 0 auto;
 
 		&__content {
-			width: 60%;
+			width: 52%;
 			padding: 20px 0 20px 35px;
 		}
 
@@ -331,14 +339,32 @@
 
 		&__text {
 			font-size: 13px;
+			font-weight: 300;
+		}
+
+		&__text span {
+			display: inline-block;
+			margin-bottom: 20px;
 			font-weight: 600;
 		}
 	}
 }
 
-// .values-slider {
-// 	margin: 0 -20%;
-// }
+.first-slider-slide--two>.values-card .values-card__content {
+	width: 51%;
+}
+
+.first-slider-slide--four>.values-card .values-card__content {
+	width: 49%;
+}
+
+.first-slider-slide--five>.values-card .values-card__content {
+	width: 45%;
+}
+
+.first-slider-slide--six>.values-card .values-card__content {
+	width: 47%;
+}
 
 // FIRST-SLIDER 
 
@@ -351,12 +377,12 @@
 		height: 442px;
 		color: #fff;
 		display: flex;
-		align-items: center; 
+		align-items: center;
 		font-weight: 300;
 	}
 
 	&__text-wrapper {
-		width: 34%;
+		width: 35%;
 		padding-left: 100px;
 	}
 
@@ -469,7 +495,8 @@
 	&__counter-text {
 		font-size: 21px;
 		font-weight: 700;
-		&:last-child{
+
+		&:last-child {
 			font-size: 18px;
 		}
 	}
@@ -689,9 +716,17 @@
 		width: 101%;
 	}
 
+	&__text {
+		width: 82%;
+	}
+
 	&__text p+p {
 		margin-top: 30px;
 	}
+}
+
+.third-slider__content--four .third-slider__text-wrapper {
+	width: 48%;
 }
 
 .third-slider-arrow-prev,
@@ -773,10 +808,12 @@
 
 	&__card-img-wrapper {
 		width: 35%;
-		&--three{
+
+		&--three {
 			width: 33%;
 			margin-right: 15px;
 		}
+
 		&--five {
 			width: 200px;
 			height: 160px;
@@ -860,7 +897,8 @@
 
 .fourth-slider {
 	margin: 0 -50%;
-	&__inner{
+
+	&__inner {
 		position: relative;
 	}
 

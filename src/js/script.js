@@ -15,10 +15,10 @@ import VacancyBtn from "./modules/VacancyBtn";
 		swiper.init(".tmpl-hh__values-slider", {
 			spaceBetween: 30,
 			loop: true,
-			// speed: 5000,
-			// autoplay: {
-			// 	delay: 1,
-			// },
+			speed: 5000,
+			autoplay: {
+				delay: 1,
+			},
 			slidesPerView: 2,
 			disableOnInteraction: true,
 			breakpoints: {
